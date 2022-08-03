@@ -1,6 +1,7 @@
-# Chinese Messages for React-Admin
+# Chinise Messages for React-Admin
 
-Chinese messages for [react-admin](https://github.com/marmelab/react-admin), the frontend framework for building admin applications on top of REST/GraphQL services.
+English messages for [ra-language-chinese-new](https://github.com/GreatBoy/ra-language-chinese-new), the frontend framework for building admin applications on top of REST/GraphQL services.
+
 
 ## Installation
 
@@ -10,22 +11,21 @@ npm install --save ra-language-chinese-new
 
 ## Usage
 
-```js
-import polyglotI18nProvider from 'ra-i18n-polyglot';
+```jsx
+import { Admin } from 'react-admin';
 import chineseMessages from 'ra-language-chinese-new';
+import polyglotI18nProvider from 'ra-i18n-polyglot';
 
-const i18nProvider = polyglotI18nProvider(() => chineseMessages, 'ch');
+const messages = {
+    'cn': chineseMessages,
+};
+const i18nProvider = polyglotI18nProvider(locale => messages[locale]);
 
-const App = () => (
-    <Admin i18nProvider={i18nProvider}>
-        ...
-    </Admin>
-);
+<Admin locale="cn" i18nProvider={i18nProvider}>
+    ...
+</Admin>
 ```
-
-## Use reference
-Please check the official website tutorial.[changing-the-default-locale](https://marmelab.com/react-admin/Translation.html#changing-the-default-locale)
 
 ## License
 
-This translation is licensed under the MIT License.
+This translation is licensed under the MIT License, and sponsored by [marmelab](https://marmelab.com).
