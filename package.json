@@ -1,5 +1,5 @@
 {
-    "name": "ra-language-chinese",
+    "name": "ra-language-chinese-new",
     "version": "2.0.10",
     "description": "Chinese messages for react-admin, the frontend framework for building admin applications on top of REST/GraphQL services",
     "main": "index.js",
